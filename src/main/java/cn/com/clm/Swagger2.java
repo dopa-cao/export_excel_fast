@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * describe: swagger
- * default path: http://localhost:8080/swagger-ui.html
+ * default path: http://localhost:8020/swagger-ui.html
  *
  * @author liming.cao
  */

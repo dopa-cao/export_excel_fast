@@ -1,5 +1,6 @@
 package cn.com.clm.controller;
 
+import cn.com.clm.aspect.LogPermission;
 import cn.com.clm.exception.CommonException;
 import cn.com.clm.response.CommonReturnData;
 import cn.com.clm.util.DataUtil;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController extends BaseController{
 
     @ApiOperation(value = "测试", notes = "测试的接口")
+    @LogPermission(logPre = "log")
     @GetMapping(value = "/test")
     public ResponseEntity<CommonReturnData> test() throws CommonException {
         return ResponseEntity.ok(CommonReturnData.create(DataUtil.buildList()));
